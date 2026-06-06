@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5">
+  <title>Dashboard do Cliente</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+  <div class="page">
+    <header class="top-bar">
+      <h1 style="text-align: center;"><img style="max-width: 3rem;" src="../img/rpmodapolicial.png" alt="RP CLUB"><icon class>RP CLUB </h1>
+    </header>
+
+    <main class="row g-4">
+      <div class="col-12">
+        <div class="row g-4">          
+          <section class="col-12 col-md-6 col-lg-4 card profile-card" >
+            <div class="section-title" style="text-align: center;"><h2>Growth Suplementos</h2></div>
+            <div style="text-align: center;">
+                <p><img class="img-fluid" src="data:image/png;base64,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" alt="Loja A"></p>
+                <p id="emailCliente"><ion-icon name="mail-outline"></ion-icon>growth@email.com</p>
+                <p id="whatsappCliente"><ion-icon name="logo-whatsapp"></ion-icon>(83)99999-9999</p>
+            </div>
+          </section>
+        <!--
+          <section class="col-12 col-md-6 col-lg-4 card qr-card">
+            <div class="section-title"><h2>QR Code único</h2></div>
+            <div class="qr-box mx-auto">
+              <img id="qrCode" class="img-fluid" src="" alt="QR Code único do cliente">
+
+            </div>
+            <p class="small">Esse código é gerado no momento do cadastro e identifica o cliente.</p>
+          </section>
+        -->
+          <section class="col-12 col-md-6 col-lg-4 card vendas-card">
+            <div>
+              <div class="section-title" style="text-align: center;"><h2>Vendas Realizadas</h2></div>
+              <div class="points-number" id="vendasLoja" style="text-align: center;">0</div>
+            </div>
+          </section>
+          <section class="col-12 col-md-6 col-lg-4 card vendas-card">
+            <div>
+              <div class="section-title" style="text-align: center;"><h2>Cadastrar</h2></div>
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                <p><button class="btn btn-primary">Venda<ion-icon name="add-circle"></ion-icon> </button></p>
+                <p><button class="btn btn-primary" ></ion-icon>Produto<ion-icon name="add-circle"></ion-icon> </button></p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      
+
+
+      <section class="col-12 card purchases-card">
+        <div class="header-row mb-3">
+          <div>
+            <div class="section-title">Últimas Vendas</div>
+            <p>Role para ver todas as vendas recentes</p>
+          </div>
+        </div>
+        <div class="purchase-list" id="listaCompras">
+          <article class="purchase-item">
+            <strong>Compra #001</strong>
+            <span>R$ 120,00 • 05/06/2026</span>
+          </article>
+          <article class="purchase-item">
+            <strong>Compra #002</strong>
+            <span>R$ 89,90 • 28/05/2026</span>
+          </article>
+          <article class="purchase-item">
+            <strong>Compra #003</strong>
+            <span>R$ 56,70 • 20/05/2026</span>
+          </article>
+          <article class="purchase-item">
+            <strong>Compra #004</strong>
+            <span>R$ 210,00 • 10/05/2026</span>
+          </article>
+          <article class="purchase-item">
+            <strong>Compra #005</strong>
+            <span>R$ 59,50 • 02/05/2026</span>
+          </article>
+          <article class="purchase-item">
+            <strong>Compra #006</strong>
+            <span>R$ 33,90 • 28/04/2026</span>
+          </article>
+          <article class="purchase-item">
+            <strong>Compra #007</strong>
+            <span>R$ 102,50 • 22/04/2026</span>
+          </article>
+          <article class="purchase-item">
+            <strong>Compra #008</strong>
+            <span>R$ 78,30 • 18/04/2026</span>
+          </article>
+          <article class="purchase-item">
+            <strong>Compra #009</strong>
+            <span>R$ 145,00 • 12/04/2026</span>
+          </article>
+          <article class="purchase-item">
+            <strong>Compra #010</strong>
+            <span>R$ 64,20 • 05/04/2026</span>
+          </article>
+          <article class="purchase-item">
+            <strong>Compra #011</strong>
+            <span>R$ 89,99 • 28/03/2026</span>
+          </article>
+          <article class="purchase-item">
+            <strong>Compra #012</strong>
+            <span>R$ 130,00 • 20/03/2026</span>
+          </article>
+          <article class="purchase-item">
+            <strong>Compra #013</strong>
+            <span>R$ 47,75 • 15/03/2026</span>
+          </article>
+          <article class="purchase-item">
+            <strong>Compra #014</strong>
+            <span>R$ 59,90 • 10/03/2026</span>
+          </article>
+          <article class="purchase-item">
+            <strong>Compra #015</strong>
+            <span>R$ 115,40 • 02/03/2026</span>
+          </article>
+          <article class="purchase-item">
+            <strong>Compra #016</strong>
+            <span>R$ 72,80 • 25/02/2026</span>
+          </article>
+        </div>
+      </section>
+      <section class="col-12 card products-card">
+        <div class="header-row mb-3">
+          <div>
+            
+                <div class="section-title">Produtos Cadastrados</div>
+                
+            
+            <p>Veja todos os produtos disponíveis no sistema</p>
+            
+          </div>
+          <div style="display: flex; align-items: center; height: min-content; text-align: center;">
+            <input type="text" class="form-control" placeholder="Buscar produtos..."><button class="btn btn-secondary ms-2"><ion-icon name="search"></ion-icon></button>
+          </div>
+          <div><button class="btn btn-primary">Produto<ion-icon name="add-circle"></ion-icon></button></div>
+        </div>
+        <div class="purchase-list product-list" id="listaProdutos">
+          <article class="purchase-item product-item d-flex align-items-center">
+            <img class="product-thumb me-3" src="https://via.placeholder.com/64" alt="Produto A">
+            <div>
+              <strong>Produto A</strong>
+              <span>R$ 129,90</span>
+            </div>
+          </article>
+          <article class="purchase-item product-item d-flex align-items-center">
+            <img class="product-thumb me-3" src="https://via.placeholder.com/64" alt="Produto B">
+            <div>
+              <strong>Produto B</strong>
+              <span>R$ 89,90</span>
+            </div>
+          </article>
+          <article class="purchase-item product-item d-flex align-items-center">
+            <img class="product-thumb me-3" src="https://via.placeholder.com/64" alt="Produto C">
+            <div>
+              <strong>Produto C</strong>
+              <span>R$ 59,50</span>
+            </div>
+          </article>
+          <article class="purchase-item product-item d-flex align-items-center">
+            <img class="product-thumb me-3" src="https://via.placeholder.com/64" alt="Produto D">
+            <div>
+              <strong>Produto D</strong>
+              <span>R$ 210,00</span>
+            </div>
+          </article>
+          <article class="purchase-item product-item d-flex align-items-center">
+            <img class="product-thumb me-3" src="https://via.placeholder.com/64" alt="Produto E">
+            <div>
+              <strong>Produto E</strong>
+              <span>R$ 49,90</span>
+            </div>
+          </article>
+          <article class="purchase-item product-item d-flex align-items-center">
+            <img class="product-thumb me-3" src="https://via.placeholder.com/64" alt="Produto F">
+            <div>
+              <strong>Produto F</strong>
+              <span>R$ 75,00</span>
+            </div>
+          </article>
+          <article class="purchase-item product-item d-flex align-items-center">
+            <img class="product-thumb me-3" src="https://via.placeholder.com/64" alt="Produto G">
+            <div>
+              <strong>Produto G</strong>
+              <span>R$ 99,90</span>
+            </div>
+          </article>
+          <article class="purchase-item product-item d-flex align-items-center">
+            <img class="product-thumb me-3" src="https://via.placeholder.com/64" alt="Produto H">
+            <div>
+              <strong>Produto H</strong>
+              <span>R$ 34,50</span>
+            </div>
+          </article>
+          <article class="purchase-item product-item d-flex align-items-center">
+            <img class="product-thumb me-3" src="https://via.placeholder.com/64" alt="Produto I">
+            <div>
+              <strong>Produto I</strong>
+              <span>R$ 159,00</span>
+            </div>
+          </article>
+          <article class="purchase-item product-item d-flex align-items-center">
+            <img class="product-thumb me-3" src="https://via.placeholder.com/64" alt="Produto J">
+            <div>
+              <strong>Produto J</strong>
+              <span>R$ 22,90</span>
+            </div>
+          </article>
+          <article class="purchase-item product-item d-flex align-items-center">
+            <img class="product-thumb me-3" src="https://via.placeholder.com/64" alt="Produto K">
+            <div>
+              <strong>Produto K</strong>
+              <span>R$ 199,99</span>
+            </div>
+          </article>
+          <article class="purchase-item product-item d-flex align-items-center">
+            <img class="product-thumb me-3" src="https://via.placeholder.com/64" alt="Produto L">
+            <div>
+              <strong>Produto L</strong>
+              <span>R$ 12,50</span>
+            </div>
+          </article>
+          <article class="purchase-item product-item d-flex align-items-center">
+            <img class="product-thumb me-3" src="https://via.placeholder.com/64" alt="Produto M">
+            <div>
+              <strong>Produto M</strong>
+              <span>R$ 299,00</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoVnY4e0y7rkD2Rr8FQnFFmN3zD4VcmWwYyU75Y+0b4I7xB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+  <script>
+    const qrCodeImg = document.getElementById('qrCode');
+    const emailCliente = document.getElementById('emailCliente').textContent;
+    QRCode.toDataURL(emailCliente, { width: 240 })
+      .then(url => { qrCodeImg.src = url; })
+      .catch(() => { qrCodeImg.alt = 'Falha ao gerar QR Code'; });
+
+    const carousel = document.getElementById('rewardsCarousel');
+    const prevBtn = document.getElementById('prevReward');
+    const nextBtn = document.getElementById('nextReward');
+
+    function getScrollStep() {
+      const item = carousel.querySelector('.reward-item');
+      return item ? item.offsetWidth + 16 : 240;
+    }
+
+    function updateCarouselButtons() {
+      prevBtn.disabled = carousel.scrollLeft <= 0;
+      nextBtn.disabled = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      carousel.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      carousel.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+    });
+
+    carousel.addEventListener('scroll', updateCarouselButtons);
+    window.addEventListener('resize', updateCarouselButtons);
+    updateCarouselButtons();
+
+    // Partners carousel controls
+    const partnersCarousel = document.getElementById('partnersCarousel');
+    const prevPartnerBtn = document.getElementById('prevPartner');
+    const nextPartnerBtn = document.getElementById('nextPartner');
+
+    function getScrollStepFor(car) {
+      const item = car.querySelector('.reward-item');
+      return item ? item.offsetWidth + 16 : 240;
+    }
+
+    function updatePartnerButtons() {
+      if (!partnersCarousel) return;
+      prevPartnerBtn.disabled = partnersCarousel.scrollLeft <= 0;
+      nextPartnerBtn.disabled = partnersCarousel.scrollLeft + partnersCarousel.clientWidth >= partnersCarousel.scrollWidth - 1;
+    }
+
+    if (prevPartnerBtn && nextPartnerBtn && partnersCarousel) {
+      prevPartnerBtn.addEventListener('click', () => {
+        partnersCarousel.scrollBy({ left: -getScrollStepFor(partnersCarousel), behavior: 'smooth' });
+      });
+
+      nextPartnerBtn.addEventListener('click', () => {
+        partnersCarousel.scrollBy({ left: getScrollStepFor(partnersCarousel), behavior: 'smooth' });
+      });
+
+      partnersCarousel.addEventListener('scroll', updatePartnerButtons);
+      window.addEventListener('resize', updatePartnerButtons);
+      updatePartnerButtons();
+    }
+  </script>
+</body><script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>
