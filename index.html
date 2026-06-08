@@ -17,6 +17,7 @@
           // Aqui você pode enviar o token para o servidor ou processar o login.
           //caso o login seja bem-sucedido, exiba o alert com a mensagem bem-vindo e o nome do usuário, que pode ser extraído do token usando uma biblioteca JWT no backend ou frontend.
           const payload = JSON.parse(atob(response.credential.split('.')[1]));
+          alert(`Bem-vindo, ${payload.name}!`);
 
         }
 
