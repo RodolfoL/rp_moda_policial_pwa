@@ -15,9 +15,8 @@
         function handleCredentialResponse(response) {
           console.log('Google ID token:', response.credential);
           // Aqui você pode enviar o token para o servidor ou processar o login.
-          //caso o login seja bem-sucedido, exiba o poup-up com a mensagem bem-vindo e o nome do usuário, que pode ser extraído do token usando uma biblioteca JWT no backend ou frontend.
+          //caso o login seja bem-sucedido, exiba o alert com a mensagem bem-vindo e o nome do usuário, que pode ser extraído do token usando uma biblioteca JWT no backend ou frontend.
           const payload = JSON.parse(atob(response.credential.split('.')[1]));
-          const userName = payload.name;
 
         }
 
