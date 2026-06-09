@@ -82,6 +82,8 @@ async function openQrCodeReader() {
         qrScannerState.scanned = true;
 
         statusLabel.textContent = 'QR code encontrado: ' + qrScannerState.rawValue;
+        //Exibe os dados lidos no qrcode
+        alert('Dados lidos: ' + qrScannerState.rawValue);
         scanning = false;
 
         setTimeout(cleanup, 1200);
