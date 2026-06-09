@@ -11,35 +11,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoVnY4e0y7rkD2Rr8FQnFFmN3zD4VcmWwYyU75Y+0b4I7xB" crossorigin="anonymous"></script>
     <script src="https://accounts.google.com/gsi/client" async defer onload="initializeGoogleSignIn()"></script>
-     <script>
-        function handleCredentialResponse(response) {
-          console.log('Google ID token:', response.credential);
-          // Aqui você pode enviar o token para o servidor ou processar o login.
-          //caso o login seja bem-sucedido, exiba o alert com a mensagem bem-vindo, o nome do usuário e o seu email, que pode ser extraído do token usando uma biblioteca JWT no backend ou frontend.
-          const payload = JSON.parse(atob(response.credential.split('.')[1]));
-          alert(`Bem-vindo, ${payload.name}! Seu email é ${payload.email}.`);
-          
-          if (payload.name === "Rodolfo Leite") {
-            window.location.href = "html/dashboard_gerente.html";
-          } else {
-            window.location.href = "html/dashboard_cliente.html";
-          }
-        }
+    <script src="js/script_login.js"></script>
 
-        function initializeGoogleSignIn() {
-          google.accounts.id.initialize({
-            client_id: "279526279825-funokmsk6feafdkthprajc10at14mt12.apps.googleusercontent.com",
-            callback: handleCredentialResponse
-          });
-
-          google.accounts.id.renderButton(
-            document.getElementById('googleSignInContainer'),
-            { theme: 'filled_black', size: 'large', width: '100%', text: 'signin_with' }
-          );
-        }
-
-      
-     </script>
   </head>
   <body>
 
@@ -64,7 +37,6 @@
             </div>
             <div class="d-grid gap-2">
               <button type="submit" class="btn btn-outline-light">Entrar</button>
-              
             </div>
           </form>
           
