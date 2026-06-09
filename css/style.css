@@ -301,4 +301,8 @@ label {
   .carousel-controls {
     justify-content: flex-start;
   }
+
+  .googleSignInContainer {
+    min-width: 100%;
+  }
 }
