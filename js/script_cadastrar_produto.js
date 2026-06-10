@@ -32,6 +32,6 @@ async function enviarImagem() {
         }
     } catch (error) {
         console.error('Erro:', error);
-        alert('Erro ao enviar imagem');
+        alert('Erro ao enviar imagem: ' + error.message);
     }
 }
