@@ -18,7 +18,7 @@ async function enviarImagem() {
     formData.append('productName', productName);
     
     try {
-        const response = await fetch('https://rp-moda-policial-backend.onrender.com/upload_imagem_produto', {
+        const response = await fetch('https://rp-moda-policial-backend.fly.dev/upload_imagem_produto', {
             method: 'POST',
             body: formData
         });
